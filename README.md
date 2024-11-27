@@ -20,7 +20,7 @@ Porfolio Website to be able to show off who I am as a person and what I know. Th
 
 
 
-### Guide on Buidlign Websites
+### Guide on Building Websites
 - https://careerfoundry.com/en/blog/web-development/software-engineer-portfolio/
 - https://jevoneugene.medium.com/crafting-an-impressive-engineering-portfolio-essential-tips-and-strategies-c5f27881c247
 - https://engineering.usu.edu/advising/launch-your-career/engineering-portfolio
