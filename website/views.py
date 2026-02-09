@@ -73,7 +73,7 @@ def contact():
                 flash('Thank you for your message! I will get back to you soon.', 'success')
                 return redirect(url_for('views.contact'))
             except Exception as e:
-                flash('An error occurred. Please try again later.', 'error')
+                flash('Unable to send message. Please try again later or email us directly.', 'error')
                 print(f"Error saving contact message: {e}")
     
     return render_template(
@@ -122,5 +122,5 @@ def api_contact():
         return jsonify({'success': True, 'message': 'Message sent successfully'})
     except Exception as e:
         print(f"Error saving contact message: {e}")
-        return jsonify({'success': False, 'message': 'Server error'}), 500
+        return jsonify({'success': False, 'message': 'Failed to save message. Please try again.'}), 500
 

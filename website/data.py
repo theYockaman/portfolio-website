@@ -2,6 +2,10 @@ import json
 import os
 from pathlib import Path
 
+# Default configuration constants
+DEFAULT_SITE_TITLE = "Portfolio Website"
+DEFAULT_LOGO_PATH = "/static/Content/Icons/wizardLogo.png"
+
 class ConfigManager:
     """Manages loading and saving configuration data for the portfolio website."""
     
@@ -108,9 +112,9 @@ class ConfigManager:
         """Return default configuration if file doesn't exist."""
         return {
             "site": {
-                "title": "Portfolio Website",
+                "title": DEFAULT_SITE_TITLE,
                 "description": "My Portfolio",
-                "logo": "/static/Content/Icons/wizardLogo.png"
+                "logo": DEFAULT_LOGO_PATH
             },
             "personal": {
                 "name": "Your Name",
