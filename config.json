@@ -1,0 +1,107 @@
+{
+  "site": {
+    "title": "Nathan Yockey",
+    "description": "Portfolio Website - Software Engineer & Developer",
+    "logo": "/static/Content/Icons/wizardLogo.png"
+  },
+  "personal": {
+    "name": "Nathan Yockey",
+    "title": "Software Engineer",
+    "bio": "Passionate software engineer with expertise in building innovative solutions and creating exceptional user experiences.",
+    "email": "contact@example.com",
+    "phone": "+1 (555) 123-4567",
+    "location": "United States",
+    "tagline": "Building the future, one line of code at a time"
+  },
+  "social": {
+    "github": "https://github.com/theYockaman",
+    "linkedin": "https://linkedin.com/in/yourprofile",
+    "twitter": "https://twitter.com/yourhandle",
+    "portfolio": "https://yourportfolio.com"
+  },
+  "navigation": [
+    { "name": "Home", "url": "/" },
+    { "name": "About", "url": "/about" },
+    { "name": "Projects", "url": "/projects" },
+    { "name": "Contact", "url": "/contact" },
+    { "name": "Shop", "url": "/shop" }
+  ],
+  "about": {
+    "image": "/static/Content/Images/profile.jpg",
+    "introduction": "Hello! I'm Nathan Yockey, a passionate software engineer dedicated to creating innovative solutions.",
+    "skills": [
+      { "name": "Python", "level": 90 },
+      { "name": "Flask", "level": 85 },
+      { "name": "JavaScript", "level": 80 },
+      { "name": "React", "level": 75 },
+      { "name": "SQL", "level": 85 },
+      { "name": "Git", "level": 90 }
+    ],
+    "experience": [
+      {
+        "title": "Software Engineer",
+        "company": "Tech Company",
+        "period": "2020 - Present",
+        "description": "Building scalable web applications and leading development teams."
+      }
+    ],
+    "education": [
+      {
+        "degree": "Computer Science",
+        "institution": "University Name",
+        "year": "2020",
+        "description": "Focused on software engineering and web development."
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "Portfolio Website",
+      "description": "A modern, responsive portfolio website built with Flask",
+      "image": "/static/Content/Images/project1.jpg",
+      "technologies": ["Python", "Flask", "HTML", "CSS", "JavaScript"],
+      "github": "https://github.com/theYockaman/portfolio-website",
+      "demo": "",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Sample Project",
+      "description": "Description of another project",
+      "image": "/static/Content/Images/project2.jpg",
+      "technologies": ["Python", "React", "API"],
+      "github": "https://github.com/yourusername/project",
+      "demo": "",
+      "featured": false
+    }
+  ],
+  "contact": {
+    "heading": "Get In Touch",
+    "subheading": "Let's work together on your next project",
+    "form_enabled": true,
+    "form_endpoint": "/api/contact"
+  },
+  "hero": {
+    "enabled": true,
+    "images": [
+      "/static/Content/Images/hero1.jpg",
+      "/static/Content/Images/hero2.jpg",
+      "/static/Content/Images/hero3.jpg"
+    ],
+    "slides": [
+      {
+        "title": "Welcome to My Portfolio",
+        "description": "Discover my work and expertise"
+      },
+      {
+        "title": "Innovative Solutions",
+        "description": "Building tomorrow's technology today"
+      },
+      {
+        "title": "Let's Create Together",
+        "description": "Ready to bring your ideas to life"
+      }
+    ]
+  }
+}
