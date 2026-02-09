@@ -8,10 +8,10 @@
 
 
     <!-- Title of Page -->
-    <title>{% block title %}Nathan Yockey{% endblock %}</title>
+    <title>{% block title %}{{ config.site.title if config and config.site and config.site.title else 'Portfolio Website' }}{% endblock %}</title>
 
     <!-- Tab Icon -->
-    <link rel="icon" href="{{ url_for('static', filename='Content/Icons/wizardLogo.png') }}">
+    <link rel="icon" href="{{ config.site.logo if config and config.site and config.site.logo else url_for('static', filename='Content/Icons/wizardLogo.png') }}">
 
 
 
@@ -43,18 +43,26 @@
 
 
 
-    <!-- Sents out Flash Messages as Alerts -->
+    <!-- Navigation Bar -->
     <nav class="navbar" >
 
       <!-- Logo & Link to Home Page -->
-      <a class="navbar__logo" href="/"><img src="{{ url_for('static', filename='Content/Icons/wizardLogo.png') }}" alt="Logo"></a>
+      <a class="navbar__logo" href="/"><img src="{{ config.site.logo if config and config.site and config.site.logo else url_for('static', filename='Content/Icons/wizardLogo.png') }}" alt="Logo"></a>
 
       <!-- Nav Links -->
       <div class="navbar__links">
-        <a class="navbar__link" href="/about">About</a>
-        <a class="navbar__link" href="/projects">Projects</a>
-        <a class="navbar__link" href="/contact">Contact</a>
-        <a class="navbar__link" href="/shop">Shop</a>
+        {% if config and config.navigation %}
+          {% for nav_item in config.navigation %}
+            {% if nav_item.url != '/' %}
+              <a class="navbar__link" href="{{ nav_item.url }}">{{ nav_item.name }}</a>
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          <a class="navbar__link" href="/about">About</a>
+          <a class="navbar__link" href="/projects">Projects</a>
+          <a class="navbar__link" href="/contact">Contact</a>
+          <a class="navbar__link" href="/shop">Shop</a>
+        {% endif %}
       </div>
 
     </nav>

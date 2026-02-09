@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{# CSS Files #}
+{% block css_files%}
+<link href="{{ url_for('static', filename='CSS/about.css') }}" rel="stylesheet">
+{% endblock %}
+
+{# Main Block #}
+{% block main %}
+
+<!-- About Section -->
+<section class="about-section">
+  <div class="container">
+    <h1>About Me</h1>
+    
+    {% if about %}
+    <div class="about-content">
+      <div class="about-intro">
+        {% if about.image %}
+        <img src="{{ about.image }}" alt="{{ personal.name }}" class="profile-image">
+        {% endif %}
+        <div class="intro-text">
+          <h2>{{ personal.name }}</h2>
+          <h3>{{ personal.title }}</h3>
+          <p>{{ about.introduction }}</p>
+          <p>{{ personal.bio }}</p>
+        </div>
+      </div>
+
+      <!-- Skills Section -->
+      {% if about.skills %}
+      <div class="skills-section">
+        <h3>Skills</h3>
+        <div class="skills-grid">
+          {% for skill in about.skills %}
+          <div class="skill-item">
+            <span class="skill-name">{{ skill.name }}</span>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: {{ skill.level }}%"></div>
+            </div>
+            <span class="skill-percentage">{{ skill.level }}%</span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+      <!-- Experience Section -->
+      {% if about.experience %}
+      <div class="experience-section">
+        <h3>Experience</h3>
+        {% for exp in about.experience %}
+        <div class="experience-item">
+          <h4>{{ exp.title }}</h4>
+          <p class="company">{{ exp.company }}</p>
+          <p class="period">{{ exp.period }}</p>
+          <p class="description">{{ exp.description }}</p>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <!-- Education Section -->
+      {% if about.education %}
+      <div class="education-section">
+        <h3>Education</h3>
+        {% for edu in about.education %}
+        <div class="education-item">
+          <h4>{{ edu.degree }}</h4>
+          <p class="institution">{{ edu.institution }}</p>
+          <p class="year">{{ edu.year }}</p>
+          <p class="description">{{ edu.description }}</p>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    {% else %}
+    <p>About information is not available yet.</p>
+    {% endif %}
+  </div>
+</section>
+
+{% endblock main%}

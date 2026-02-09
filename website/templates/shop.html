@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{# CSS Files #}
+{% block css_files%}
+<link href="{{ url_for('static', filename='CSS/shop.css') }}" rel="stylesheet">
+{% endblock %}
+
+{# Main Block #}
+{% block main %}
+
+<!-- Shop Section -->
+<section class="shop-section">
+  <div class="container">
+    <h1>Shop</h1>
+    <p class="section-description">Coming Soon!</p>
+    
+    <div class="coming-soon">
+      <p>This section is under development. Check back soon for updates.</p>
+    </div>
+  </div>
+</section>
+
+{% endblock main%}

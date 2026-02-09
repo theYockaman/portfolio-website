@@ -7,7 +7,7 @@ from flask_login import LoginManager
 
 # Setup Database
 db = SQLAlchemy()
-DB_NAME = "movieGuru.db"
+DB_NAME = "portfolio.db"
 
 # Setup App
 def create_app():
